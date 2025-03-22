@@ -1,5 +1,5 @@
-# Google-Cybersecurity-Course
-Notes and assignments for the Google cybersecurity course on Coursera  
+# My notes for the Google Cybersecurity Course
+Notes and assignments for the Google cybersecurity course on Coursera:  
 https://www.coursera.org/professional-certificates/google-cybersecurity  
   
 ### Content:
