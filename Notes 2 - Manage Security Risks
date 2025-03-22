@@ -1,0 +1,113 @@
+# Cybersecurity: Course 2 Module 1 Study Notes
+
+## CISSP Security Domains Overview
+
+The CISSP framework identifies eight security domains that organize cybersecurity work:
+
+1. **Security and Risk Management**
+   - Focuses on: Security goals, risk mitigation, compliance, business continuity, and legal regulations
+   - Core function: Developing security posture - an organization's ability to defend assets and react to change
+   - Key components: InfoSec processes, playbooks, and training programs
+
+2. **Asset Security**
+   - Focuses on: Managing digital and physical assets throughout their lifecycle
+   - Key activities: Storage, maintenance, retention, and destruction of data
+   - Example: Overseeing proper hard drive destruction to prevent data access by threat actors
+
+3. **Security Architecture and Engineering**
+   - Focuses on: Optimizing data security through effective tools, systems, and processes
+   - Core concept: Shared responsibility - all individuals take active roles in security
+   - Key principles: Threat modeling, least privilege, defense in depth, fail securely, etc.
+
+4. **Communication and Network Security**
+   - Focuses on: Managing and securing physical networks and wireless communications
+   - Scope: On-site, remote, and cloud communications
+   - Example: Protecting employees working remotely from vulnerabilities on public WiFi
+
+5. **Identity and Access Management (IAM)**
+   - Focuses on: Access and authorization controls to protect data
+   - Core concept: Principle of least privilege
+   - Components: Identification, authentication, authorization, and accountability
+
+6. **Security Assessment and Testing**
+   - Focuses on: Identifying and mitigating risks through control testing and data analysis
+   - Key activities: Security control testing, data collection/analysis, and security audits
+   - Example: Penetration testing to find vulnerabilities before threat actors do
+
+7. **Security Operations**
+   - Focuses on: Conducting investigations and implementing preventative measures
+   - Key responsibilities: Incident response, digital forensic investigations, and threat neutralization
+   - Timeline: Begins once a security incident is identified, requires urgent action
+
+8. **Software Development Security**
+   - Focuses on: Secure coding practices throughout the development lifecycle
+   - Key principle: Security must be integrated into each phase, not added afterward
+   - Activities: Secure design reviews, code reviews, and penetration testing
+
+## Security Fundamentals: Threats, Risks, and Vulnerabilities
+
+### Core Definitions
+- **Asset**: An item perceived as having value to an organization (digital or physical)
+- **Threat**: Any circumstance or event that can negatively impact assets
+- **Risk**: Anything that can impact the confidentiality, integrity, or availability of an asset
+- **Vulnerability**: A weakness that can be exploited by a threat
+
+### Risk Levels
+- **Low-risk assets**: Public information that wouldn't harm operations if compromised
+- **Medium-risk assets**: Non-public information that could cause some damage if compromised
+- **High-risk assets**: Information protected by regulations that would cause severe damage if compromised
+
+### Risk Management Strategies
+- **Acceptance**: Accepting a risk to maintain business continuity
+- **Avoidance**: Creating a plan to avoid the risk entirely
+- **Transference**: Transferring risk management to a third party
+- **Mitigation**: Reducing the impact of a known risk
+
+### Common Threats and Vulnerabilities
+- **Social engineering**: Manipulation techniques exploiting human error (e.g., phishing)
+- **Insider threats**: Staff members or vendors abusing authorized access
+- **Advanced persistent threats (APTs)**: Maintaining unauthorized access for extended periods
+- **Ransomware**: Malicious attacks encrypting organizational data for ransom payments
+- **Technical vulnerabilities**: ProxyLogon, ZeroLogon, Log4Shell, etc.
+
+### The Web Layers
+- **Surface web**: Publicly accessible content via standard browsers
+- **Deep web**: Content requiring authorization (e.g., company intranets)
+- **Dark web**: Content accessible only via specialized software, often used for criminal activities
+
+### Key Impacts of Security Incidents
+1. **Financial impact**: Production interruption, correction costs, compliance fines
+2. **Identity theft**: Compromise of PII and sensitive data
+3. **Reputational damage**: Loss of customer trust and potential legal consequences
+
+## NIST Risk Management Framework (RMF)
+
+A seven-step approach to manage security and privacy risks:
+
+1. **Prepare**: Establish risk management activities before breaches occur
+2. **Categorize**: Develop processes based on confidentiality, integrity, and availability needs
+3. **Select**: Choose and document controls that protect organizational assets
+4. **Implement**: Execute security and privacy plans throughout the organization
+5. **Assess**: Evaluate if controls are implemented correctly and meeting needs
+6. **Authorize**: Take accountability for security and privacy risks
+7. **Monitor**: Maintain awareness of system operations and effectiveness
+
+## Career Insights
+
+Key skills for cybersecurity professionals:
+- Technical analysis and problem-solving
+- Teamwork and communication
+- Customer service and interpersonal skills
+- Adaptability and continuous learning
+
+Multiple entry paths exist into cybersecurity careers:
+- Military training and experience
+- Community college and certification programs
+- Career transitions from IT or customer service roles
+- Self-directed learning and industry conferences
+
+Common entry-level analyst responsibilities:
+- Monitoring access requests and permissions
+- Addressing system misconfigurations and patching needs
+- Working across teams to develop security solutions
+- Analyzing security risks and implementing controls
