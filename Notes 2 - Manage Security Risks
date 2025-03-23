@@ -34,6 +34,7 @@ The CISSP framework identifies eight security domains that organize cybersecurit
    - Key activities: Security control testing, data collection/analysis, and security audits
    - Example: Penetration testing to find vulnerabilities before threat actors do
 
+
 7. **Security Operations**
    - Focuses on: Conducting investigations and implementing preventative measures
    - Key responsibilities: Incident response, digital forensic investigations, and threat neutralization
@@ -111,3 +112,97 @@ Common entry-level analyst responsibilities:
 - Addressing system misconfigurations and patching needs
 - Working across teams to develop security solutions
 - Analyzing security risks and implementing controls
+
+# Course 2 Module 2
+## Security Frameworks and Controls
+**Security Frameworks:** Guidelines used for building plans to help mitigate risks and threats to data and privacy. They help organizations create security policies and processes.
+
+**Security Controls:** Safeguards designed to reduce specific security risks. They implement the frameworks in practical ways.
+
+**Types of Security Controls:**
+- Physical: Gates, locks, CCTV, access cards
+- Technical: Firewalls, MFA, antivirus software
+- Administrative: Separation of duties, authorization, asset classification
+
+**Key Controls:**
+- Encryption: Converting data from readable format (plaintext) to encoded format (ciphertext)
+- Authentication: Verifying who someone is (e.g., login credentials)
+- Authorization: Granting access to specific resources based on permission
+
+## The CIA Triad
+Core security model that informs organizational risk assessment:
+- Confidentiality: Only authorized users can access specific assets or data
+  - Implemented through principle of least privilege
+- Integrity: Data is correct, authentic, and reliable
+  - Maintained through cryptography and encryption
+- Availability: Data is accessible to those authorized to use it
+  - Ensures systems function properly for timely access
+
+## NIST Cybersecurity Framework (CSF)
+Voluntary framework consisting of standards, guidelines, and best practices to manage cybersecurity risk.
+
+**Six Core Functions:**
+- Govern (New in CSF v2.0): Establishing and maintaining cybersecurity governance structures and processes
+- Identify: Managing cybersecurity risk impact on organization's people and assets
+- Protect: Implementing policies, procedures, training, and tools to mitigate threats
+- Detect: Identifying potential security incidents and improving monitoring capabilities
+- Respond: Using proper procedures to contain, neutralize, and analyze security incidents
+- Recover: Returning affected systems to normal operation
+
+CSF v2.0 also emphasizes supply chain risk management.
+
+## NIST SP 800-53
+Unified framework for protecting federal government information systems, including systems provided by private companies for federal use.
+
+## OWASP Security Principles
+- Minimize attack surface area: Reduce potential vulnerabilities by disabling unnecessary features
+- Principle of least privilege: Users should have minimal access required for their tasks
+- Defense in depth: Multiple security controls addressing risks in different ways
+- Separation of duties: Prevent individuals from having too many privileges
+- Keep security simple: Avoid unnecessarily complicated solutions
+- Fix security issues correctly: Identify root causes and test repairs
+
+**Additional OWASP Principles:**
+- Establish secure defaults: Security should be the default state
+- Fail securely: Controls should default to most secure option when failing
+- Don't trust services: Third-party services shouldn't be implicitly trusted
+- Avoid security by obscurity: Security shouldn't rely on keeping details hidden
+
+## Security Audits
+**Security Audit:** Review of an organization's security controls, policies, and procedures against expectations.
+
+**Types:**
+- External audits
+- Internal audits (common for entry-level analysts)
+
+**Elements of Internal Audits:**
+- Establish scope and goals:
+  - Scope: Specific criteria (people, assets, policies, procedures, technologies)
+  - Goals: Security objectives to improve security posture
+- Conduct risk assessment:
+  - Identify potential threats, risks, and vulnerabilities
+  - Determine what security measures should be implemented
+- Complete controls assessment:
+  - Review existing assets and evaluate potential risks
+  - Ensure internal controls and processes are effective
+  - Classify controls (administrative, technical, physical)
+- Assess compliance:
+  - Determine adherence to necessary regulations (e.g., GDPR, PCI DSS)
+- Communicate results:
+  - Summarize scope and goals
+  - List existing risks and urgency
+  - Identify compliance requirements
+  - Provide recommendations
+
+**Audit Best Practices:**
+- Create a checklist before conducting an audit
+- Identify the scope clearly
+- Complete risk assessment
+- Create a mitigation plan
+- Communicate results effectively to stakeholders
+
+## Professional Development
+Stay current with cybersecurity trends through:
+- Online forums like Medium (with topic filtering)
+- Industry conferences for networking
+- Focus on specific areas rather than trying to master everything at once
