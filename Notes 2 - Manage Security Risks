@@ -207,7 +207,9 @@ Stay current with cybersecurity trends through:
 - Industry conferences for networking
 - Focus on specific areas rather than trying to master everything at once
 
-# Course 2 Module 3: Security Information and Event Management (SIEM) Tools
+# Course 2 Module 3
+
+## Security Information and Event Management (SIEM) Tools
 
 ## Core Concept: Understanding SIEM
 
@@ -312,3 +314,46 @@ A SIEM (Security Information and Event Management) tool is an application that:
 - Customize tools to organizational needs
 - Regularly update security configurations
 - Maintain a comprehensive, adaptive security posture
+
+# Course 2, Module 4
+
+## **Incident Response Playbooks**
+### **Overview**
+A playbook is a manual outlining operational actions for responding to security incidents. It ensures a structured and efficient approach, helping teams mitigate risks quickly. Playbooks are living documents, updated regularly to address evolving threats and industry standards.
+
+### **Phases of Incident Response Playbooks**
+1. **Preparation**: Organizations document response procedures, assign roles, and conduct security training to minimize risks.
+2. **Detection & Analysis**: Security analysts use tools (e.g., SIEM) to identify breaches and assess their impact.
+3. **Containment**: Immediate actions to limit damage, such as isolating affected systems.
+4. **Eradication & Recovery**: Removal of malicious artifacts and restoration of systems to a secure state.
+5. **Post-Incident Activity**: Documentation, root cause analysis, and updating security measures.
+6. **Coordination**: Reporting to authorities, ensuring compliance, and improving future response effectiveness.
+
+## **Types of Playbooks**
+- **Incident Response Playbooks**: Guide teams in handling security breaches.
+- **Vulnerability Response Playbooks**: Address weaknesses before exploitation occurs.
+- **Product-Specific Playbooks**: Tailored for particular tools or services.
+- **Compliance-Based Playbooks**: Ensure regulatory requirements are met.
+
+## **Playbooks & Security Tools**
+- **SIEM Tools**: Collect and analyze security event data to detect threats. Playbooks help analysts interpret alerts and take action.
+- **SOAR Tools**: Automate responses to security incidents, reducing manual workload.
+
+## **Example: Handling a Malware Attack**
+1. **Assess SIEM Alert**: Validate whether it indicates an actual attack.
+2. **Contain Infection**: Disconnect affected systems to prevent further spread.
+3. **Eradicate Threat**: Remove malware and restore systems from clean backups.
+4. **Post-Incident Review**: Update playbooks based on lessons learned.
+
+## **Importance of Playbooks**
+- Provide step-by-step guidance to security teams.
+- Ensure compliance with industry regulations.
+- Reduce response time and minimize impact.
+- Support forensic investigations by preserving data integrity.
+
+## **Key Takeaways**
+- Playbooks standardize incident response, improving efficiency and accuracy.
+- They integrate with SIEM and SOAR tools to streamline threat management.
+- Security teams must continuously refine playbooks based on new threats and past incidents.
+
+For further information, refer to resources such as the **NCSC (UK), JPCERT (Japan), and ACSC (Australia).**
