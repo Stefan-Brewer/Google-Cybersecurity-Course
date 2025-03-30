@@ -1,0 +1,229 @@
+# Course 3: Networks and Network Security
+## Module 1: Network architecture
+
+### Introduction to Networks
+
+#### Network Basics
+- **Network**: A group of connected devices that can communicate with each other
+- **Network Architecture**: The basic structure and design of a network
+- **Network Security**: Protection of network infrastructure and data from threats and vulnerabilities
+- **Device Identification**: Devices locate each other using unique identifiers (IP and MAC addresses)
+
+#### Network Types
+- **LAN (Local Area Network)**: Spans a small area (office building, school, home)
+  - Example: Your home devices connected to WiFi
+- **WAN (Wide Area Network)**: Spans a large geographical area (city, state, country)
+  - The internet is essentially one large WAN
+  - Enables resource sharing across geographic locations
+
+#### Network Devices
+1. **Hub**
+   - Broadcasts information to every device on the network
+   - Similar to a radio tower broadcasting to all tuned radios
+   - Less secure and less efficient
+
+2. **Switch**
+   - More intelligent than a hub
+   - Makes connections between specific devices
+   - Only passes data to the intended destination
+   - Improves network performance and security
+   - Maintains a MAC address table to direct packets
+   - Operates at the data link layer in the TCP/IP model
+
+3. **Router**
+   - Connects multiple networks together
+   - Directs traffic based on IP addresses
+   - Reads destination addresses and forwards data accordingly
+   - Part of the network layer in the TCP/IP model
+   - Can include firewall features to filter traffic
+
+4. **Modem**
+   - Connects router to the internet
+   - Provides internet access to the LAN
+   - Receives digital signals and translates them to analog signals
+   - Usually connects to a router that distributes connections to local devices
+
+5. **Firewall**
+   - Monitors traffic to/from the network
+   - First line of defense
+   - Restricts specific incoming/outgoing traffic
+   - Typically positioned between internal network and external resources
+
+6. **Wireless Access Point**
+   - Creates wireless networks using Wi-Fi
+   - Sends/receives digital signals over radio waves
+   - Devices connect using wireless adapters
+
+#### Client-Server Model
+- **Servers**: Provide information and services
+- **Clients**: Devices that connect to servers and request information/services
+- Common server types:
+  - DNS servers (domain name lookups)
+  - File servers (store/retrieve files)
+  - Mail servers (organize company email)
+
+#### Cloud Computing
+- Uses remote servers hosted on the internet instead of local physical devices
+- **Cloud Network**: Collection of servers that store resources and data in remote data centers
+- Accessed via the internet from any location
+- Growing trend as businesses migrate to reduce costs and simplify operations
+
+#### Cloud Service Models
+- **SaaS (Software as a Service)**: Remote software suites
+- **IaaS (Infrastructure as a Service)**: Virtual computer components (containers, storage)
+- **PaaS (Platform as a Service)**: Tools for designing custom applications
+
+#### Advanced Network Concepts
+- **Software-Defined Networks (SDN)**: Virtual network devices and services
+- **Hybrid Cloud**: Organizations using both CSP services and on-premise resources
+- **Multi-Cloud**: Using more than one Cloud Service Provider
+
+#### Benefits of Cloud Computing
+1. **Reliability**: Consistent access to resources with minimal interruption
+2. **Cost Reduction**: Lower upfront costs, pay-as-you-go model
+3. **Scalability**: Easy to scale resources up or down as needed
+
+#### Network Diagrams
+- Visual maps showing devices on a network and their connections
+- Used by security analysts to understand network architecture
+- Help develop strategies for securing networks
+
+#### Career Insights
+- Network security professionals protect network systems and user data
+- Skills needed:
+  - Command line usage
+  - Log parsing
+  - Network traffic analysis
+  - Communication skills
+  - Continuous learning and curiosity
+
+### Network Communication
+
+#### Data Transmission Fundamentals
+- **Data Packets**: Basic units of information transmitted between devices
+  - Contains: destination address, source address, protocol number, message body, and footer
+  - Similar to a physical letter with addressing and content
+
+- **Performance Metrics**:
+  - **Bandwidth**: Amount of data received per second (quantity of data ÷ time)
+  - **Speed**: Rate at which data packets are received/downloaded
+  - Irregular bandwidth/speed can indicate a network attack
+  - **Packet sniffing**: Capturing and inspecting data packets across a network
+
+#### TCP/IP Model
+The standard model for network communication consisting of four layers:
+
+##### 1. Network Access Layer (lowest)
+- Deals with creation and transmission of data packets
+- Includes physical hardware (hubs, modems, cables, wiring)
+- Contains the Address Resolution Protocol (ARP)
+  - Maps IP addresses to MAC addresses for local network communication
+
+##### 2. Internet Layer
+- Ensures delivery to destination hosts (potentially on different networks)
+- Attaches IP addresses to data packets
+- Key protocols:
+  - **Internet Protocol (IP)**: Routes packets to correct destination
+  - **Internet Control Message Protocol (ICMP)**: Shares error information and status updates
+
+##### 3. Transport Layer
+- Controls traffic flow across networks
+- Responsible for delivering data between systems
+- Key protocols:
+  - **Transmission Control Protocol (TCP)**:
+    - Establishes connections between devices
+    - Ensures reliable data transmission
+    - Contains port numbers for destination services
+  - **User Datagram Protocol (UDP)**:
+    - Connectionless protocol (doesn't establish connections before transmission)
+    - Used for performance-sensitive applications (video streaming)
+    - Less tracking/reliability than TCP
+
+##### 4. Application Layer (highest)
+- Handles interaction with receiving devices
+- Defines internet services and applications accessible to users
+- Common protocols:
+  - HTTP/HTTPS (web browsing)
+  - SMTP (email)
+  - SSH (secure remote access)
+  - FTP (file transfers)
+  - DNS (domain name resolution)
+
+### Ports
+- Software-based locations within operating systems that organize data transmission
+- Divide network traffic based on service type
+- Common port numbers:
+  - Port 25: Email
+  - Port 443: Secure internet communication
+  - Port 20: Large file transfers
+
+### OSI Model Comparison
+The OSI model has 7 layers compared to TCP/IP's 4 layers:
+
+1. **Physical Layer** (cables, hardware)
+2. **Data Link Layer** (switches, network interface cards)
+3. **Network Layer** (routing between networks)
+4. **Transport Layer** (data delivery, TCP/UDP)
+5. **Session Layer** (connection establishment, authentication)
+6. **Presentation Layer** (data translation, encryption)
+7. **Application Layer** (user-facing applications)
+
+TCP/IP combines multiple OSI layers:
+- TCP/IP Network Access Layer = OSI Physical + Data Link Layers
+- TCP/IP Internet Layer = OSI Network Layer
+- TCP/IP Transport Layer = OSI Transport Layer
+- TCP/IP Application Layer = OSI Application + Presentation + Session Layers
+
+### Local and Wide Network Communication
+
+#### IP Addressing
+- **IP Address**: Unique string identifying device location on the internet
+- Two versions:
+  
+  #### IPv4
+  - Format: Four 1-3 digit numbers separated by periods (e.g., 198.51.100.0)
+  - 4 bytes total (32 bits)
+  - Allows up to 4.3 billion possible addresses
+  - Header size: 20-60 bytes
+  
+  #### IPv6
+  - Format: Eight hexadecimal numbers separated by colons (e.g., 2002:0db8::ff21:0023:1234)
+  - 16 bytes total (128 bits)
+  - Allows 340 undecillion addresses
+  - Developed to address IPv4 exhaustion
+  - Simpler header format than IPv4
+  - Offers more efficient routing and eliminates private address collisions
+
+- **Public vs Private IP Addresses**:
+  - **Public**: Assigned by ISP, connected to geographic location, shared by all devices on network
+  - **Private**: Only visible to devices on same local network, enables internal communication
+
+#### MAC Addresses
+- Unique alphanumeric identifier assigned to each physical device
+- Used by switches to direct data packets to appropriate devices
+- Switches maintain MAC address tables mapping addresses to ports
+
+#### IPv4 Packet Structure
+- **Header** (20-60 bytes):
+  - Version (VER): Protocol used (IPv4)
+  - Header Length (HLEN/IHL): Where header ends and data begins
+  - Type of Service (ToS): For prioritizing packets
+  - Total Length: Size of entire packet (max 65,535 bytes)
+  - Identification, Flags, Fragmentation Offset: Used for packet fragmentation
+  - Time to Live (TTL): Prevents infinite packet forwarding
+  - Protocol: Protocol used for data portion
+  - Header Checksum: Detects header corruption
+  - Source/Destination IP Addresses
+  - Options: Security options (if HLEN > 5)
+
+- **Data Section**: Variable size, contains the actual message
+
+#### Security Implications
+- IP data packets contain critical security information:
+  - Source (where packet is coming from)
+  - Destination (where it's going)
+  - Protocol being used
+- Analyzing packet fields reveals important security details
+- IPv6 offers security advantages over IPv4
+  - More efficient routing
+  - Eliminates private address collisions
