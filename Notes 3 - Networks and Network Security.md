@@ -240,3 +240,121 @@ TCP/IP combines multiple OSI layers:
 - Apply the principle of least privilege for network access
 - Monitor traffic for suspicious activity
 - Implement both physical and virtual security measures
+
+
+# Network Security & Intrusion Tactics
+
+## 1. Introduction to Network Intrusion Tactics
+
+### Why Secure Networks?
+- Networks face constant attack risks from malicious hackers
+- Attacks can leak confidential information, damage reputation, impact customer retention, and cost money/time to mitigate
+- Case example: Home Depot (2014) - servers infected with malware compromised credit/debit information of 56 million customers
+
+### Types of Network Intrusion Attacks
+
+#### Network Interception Attacks
+- Intercept network traffic to steal information or manipulate transmissions
+- **Packet sniffing**: Capturing/inspecting data packets in transit
+  - **Passive sniffing**: Reading data packets without altering them
+  - **Active sniffing**: Manipulating data packets in transit
+- **On-path attacks** (meddler-in-the-middle): Intercepting communications between trusted devices
+  - Can collect credentials or spoof DNS responses to redirect users
+  - Protection: Encrypt data in transit (e.g., TLS)
+
+#### Backdoor Attacks
+- Weaknesses intentionally left by programmers/administrators that bypass normal access controls
+- Originally for troubleshooting but can be exploited for malicious purposes
+- Allows attackers to install malware, perform DoS attacks, steal information, or change security settings
+
+### Impact of Network Attacks
+- **Financial**: Service interruption, repair costs, ransomware payments, litigation from affected customers
+- **Reputation**: Public trust erosion, customer migration to competitors
+- **Public safety**: Critical infrastructure compromise (power grids, water systems, defense communications)
+
+## 2. Denial of Service (DoS) Attacks
+
+### Basic Concepts
+- **DoS attack**: Floods network/server with traffic to disrupt operations
+- **DDoS attack**: Uses multiple devices/servers in different locations to amplify the attack
+
+### Common Network-Level DoS Attacks
+
+#### SYN Flood Attack
+- Exploits TCP connection handshake process
+- Attacker floods server with SYN packets but never completes handshake
+- Consumes all available ports, preventing legitimate connections
+
+#### ICMP-Based Attacks
+- **ICMP (Internet Control Message Protocol)**: Used for network status/error reporting
+- **ICMP flood**: Repeatedly sends ICMP packets to force responses until bandwidth is consumed
+- **Ping of death**: Sends oversized ICMP packets (>64KB) to crash vulnerable systems
+
+#### Smurf Attack
+- Combines IP spoofing with DoS techniques
+- Attacker spoofs victim's IP address and sends ICMP requests to network broadcast address
+- All devices respond to the victim's IP, overwhelming it with traffic
+
+### Real-World DDoS Example (2016 DNS Attack)
+- University students created a botnet targeting gaming servers
+- Code was posted online, allowing others to gain control
+- Attackers sent tens of millions of DNS requests to major DNS service provider
+- Resulted in widespread outages across North America and Europe for websites using the service
+- Service was restored after two hours
+
+## 3. Network Attack Tactics and Mitigations
+
+### IP Spoofing
+- Changing source IP of data packets to impersonate authorized systems
+- Used to bypass authentication or hide attacker's identity
+- Mitigation: Configure firewalls to refuse unauthorized IP packets and suspicious traffic
+
+### Packet Sniffing Mechanics
+- Network Interface Cards (NICs) can be set to "promiscuous mode" to accept all traffic
+- Attackers use software like Wireshark to capture and analyze network data
+- Can obtain IP/MAC addresses, credentials, or personal information
+
+### Replay Attacks
+- Intercepting valid data transmissions and repeating them later
+- Example: Capturing authentication packets and resending them to gain access
+
+### Protection Against Network Attacks
+
+#### Against Packet Sniffing
+- Use VPNs to encrypt data in transit
+- Ensure websites use HTTPS (SSL/TLS encryption)
+- Avoid unprotected public WiFi networks
+
+#### Against DoS/DDoS
+- Implement advanced firewalls that detect network anomalies
+- Use traffic filtering to block suspicious patterns
+- Distribute resources across dynamically scalable hosts
+
+#### General Security Measures
+- Apply encryption for data in transit
+- Regularly update and patch systems
+- Monitor network for unusual traffic patterns
+- Implement defense-in-depth strategy (multiple layers of security)
+
+## 4. Security Analyst Role
+
+### Defensive Techniques
+- Use network protocol analyzers (tcpdump, Wireshark) to monitor traffic patterns
+- Analyze packet content for security investigations
+- Establish network traffic baselines to identify anomalies
+- Review logs for signs of intrusion attempts
+
+### tcpdump Analysis
+- Command-line network protocol analyzer
+- Captures and displays packet information:
+  - Timestamp
+  - Source IP and port
+  - Destination IP and port
+- Used for troubleshooting and security monitoring
+
+### Professional Perspective
+- Incident response requires:
+  - The "3Cs": Command, Control, and Communications
+  - Calm under pressure
+  - Coordination with team members
+  - Clear communication about findings and actions
