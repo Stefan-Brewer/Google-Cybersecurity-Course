@@ -358,3 +358,102 @@ TCP/IP combines multiple OSI layers:
   - Calm under pressure
   - Coordination with team members
   - Clear communication about findings and actions
+
+# Security Hardening: Networks and Network Security
+
+## 1. Security Hardening Fundamentals
+
+Security hardening is the process of strengthening a system to reduce its vulnerability and attack surface. The attack surface comprises all potential vulnerabilities that could be exploited.
+
+Key aspects:
+- Can be implemented on devices, networks, applications, and cloud infrastructure
+- Includes regular maintenance procedures to keep systems functioning securely
+- Physical security is also a component (security cameras, guards, etc.)
+
+## 2. OS Hardening Practices
+
+Operating systems serve as intermediaries between hardware and users/software applications. Security is critical as one compromised OS can lead to network-wide vulnerabilities.
+
+### Regular Interval Tasks:
+- **Patch Updates**: Software/OS updates addressing security vulnerabilities
+  - Critical to install promptly after release to prevent exploitation
+- **Baseline Configuration**: Documented specifications used as reference for builds and updates
+  - Allows comparison of current configuration against the baseline
+- **Hardware/Software Disposal**: Properly wiping hardware and removing unused software applications
+
+### Security Measures:
+- **Strong Password Policies**: Rules requiring specific character types, length, etc.
+- **Multi-Factor Authentication (MFA)**: Verification using multiple methods (something you know, have, or are)
+
+## 3. Brute Force Attacks
+
+Types of brute force attacks:
+- **Simple Brute Force**: Manually trying combinations of credentials
+- **Dictionary Attacks**: Using lists of commonly used passwords or leaked credentials
+
+### Prevention Measures:
+- **Salting and Hashing**: One-way conversion of information with added random characters
+- **MFA/2FA**: Requiring multiple forms of verification
+- **CAPTCHA/reCAPTCHA**: Tests distinguishing humans from automated programs
+- **Password Policies**: Guidelines for password complexity, updates, and reuse
+
+### Testing Environments:
+- **Virtual Machines (VMs)**: Software versions of physical computers providing isolation
+- **Sandbox Environments**: Testing environments separate from the main network
+
+## 4. Network Hardening Practices
+
+### Regular Tasks:
+- **Firewall Rules Maintenance**: Keeping rules updated and relevant
+- **Network Log Analysis**: Examining logs to identify events of interest using log analyzers or SIEM tools
+- **Patch Updates**: Network device firmware and software updates
+- **Server Backups**: Regular data backup procedures
+
+### One-Time Tasks (with updates as needed):
+- **Port Filtering**: Blocking/allowing specific ports to limit communication
+- **Network Access Privileges**: Restricting access based on user roles
+- **Network Segmentation**: Creating isolated subnets for different departments
+- **Encryption**: Implementing current encryption standards for all communications
+
+## 5. Network Security Applications: Defense in Depth
+
+Defense in depth refers to adding multiple layers of security to a network:
+
+### Security Layers:
+- **Firewalls**: Allow/block traffic based on rules examining packet headers
+- **Intrusion Detection System (IDS)**: Monitors system activity and alerts on possible intrusions
+  - Located behind firewall to reduce false positives
+  - Limitation: Only detects known attacks/anomalies and doesn't stop traffic
+- **Intrusion Prevention System (IPS)**: Monitors and actively stops intrusive activity
+  - Sits behind firewall, blocks suspicious traffic before reaching sensitive areas
+  - Limitation: If it breaks, network connection may be disrupted
+- **Full Packet Capture Devices**: Record and analyze all network data
+- **Security Information and Event Management (SIEM)**: Collects and analyzes log data
+  - Creates centralized dashboard ("single pane of glass")
+  - Helps prioritize security events but only reports issues without taking action
+
+## 6. Cloud Security
+
+Cloud networks are collections of servers storing resources and data in remote data centers, accessed via the internet.
+
+### Key Considerations:
+- **Identity Access Management (IAM)**: Manages digital identities and access to cloud resources
+- **Configuration**: Precise setup of each cloud service to maintain security
+- **Attack Surface**: More services can mean more entry points without proper design
+- **Zero-Day Attacks**: CSPs typically detect these faster than traditional IT organizations
+- **Visibility and Tracking**: Organizations have less direct visibility into CSP infrastructure
+- **Rapid Changes**: Cloud services frequently update, requiring organizational adaptations
+
+### Hardening Techniques:
+- **Hypervisors**: Abstract hardware from the operating environment (Type 1 run on hardware, Type 2 on software)
+- **Baselining**: Establishing reference points for cloud environment configuration
+- **Cryptography**: Encrypting data processed and stored in cloud environments
+- **Cryptographic Erasure**: Destroying encryption keys to make data unreadable
+
+### Key Management:
+- **Trusted Platform Module (TPM)**: Computer chip for secure credential storage
+- **Cloud Hardware Security Module (CloudHSM)**: Device for cryptographic key storage and operations
+
+### Shared Responsibility Model:
+- **CSP Responsibility**: Cloud infrastructure, physical data centers, hypervisors, host operating systems
+- **Organization Responsibility**: Assets and processes stored or operated in the cloud, proper configuration
