@@ -9,3 +9,4 @@ https://www.coursera.org/professional-certificates/google-cybersecurity
 4. [Course 2 assignment: Security Audit](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%202%20-%20Security%20Audit.md)
 5. [Course 3 Networks and Network Security - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%203%20-%20Networks%20and%20Network%20Security)
 6. [Course 3 assignment: Incident report analysis](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%203%20-%20Incident%20report%20analysis.pdf)
+7. [Course 4 Linux and SQL - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%204%20-%20Linux%20and%20SQL.md)
