@@ -105,6 +105,152 @@
 
 ### Security Analyst Responsibilities
 - Configuring and maintaining system security
+
+# Module 2 - The Linux operating system
+
+## Introduction to Linux
+
+- **Definition**: Linux is an open-source operating system widely used in cybersecurity
+- **Origin**: Created through the combination of:
+  - Linus Torvalds' Linux kernel
+  - Richard Stallman's GNU operating system
+
+- **Key Features**:
+  - Open source (free to use, modify, and share)
+  - Strong community development support
+  - Multiple distributions (600+) for different purposes
+  - Commonly used in security tools and programs
+
+- **Security Applications**:
+  - Log examination and analysis
+  - Identity and access management
+  - Digital forensics
+  - Penetration testing
+
+## Linux Architecture
+
+The Linux architecture consists of six main components that work together:
+
+1. **User**: The person interacting with the computer (Linux supports multiple simultaneous users)
+
+2. **Applications**: Programs that perform specific tasks
+   - Installed via package managers
+   - Packages can be combined to form applications
+
+3. **Shell**: Command-line interpreter that processes commands and outputs results
+   - Allows users to communicate with the OS
+   - Translates user commands for the kernel
+   - Multiple shell types exist (bash, csh, ksh, etc.)
+   - Bash is the most common in cybersecurity
+
+4. **Filesystem Hierarchy Standard (FHS)**: Organizes data storage
+   - Specifies file/directory locations in the OS
+   - Directories contain files or other directories
+
+5. **Kernel**: Manages processes and memory
+   - Communicates with hardware to execute commands
+   - Uses drivers to enable application execution
+   - Helps allocate system resources efficiently
+
+6. **Hardware**: Physical components of the computer
+   - **Peripheral devices**: External components (monitor, keyboard, mouse)
+   - **Internal hardware**: Core components
+     - CPU (Central Processing Unit): Main processor
+     - RAM (Random Access Memory): Short-term memory
+     - Hard drive: Long-term storage
+
+## Linux Distributions
+
+- **Distribution (distro)**: Different versions of Linux with specific tools, interfaces, and purposes
+
+- **Major Parent Distributions**:
+  - Debian (parent to Ubuntu, KALI LINUX, Parrot)
+  - Red Hat (parent to CentOS)
+  - Slackware (parent to SUSE)
+
+- **Security-Focused Distributions**:
+
+  1. **KALI LINUX**:
+     - Debian-derived, focused on penetration testing and digital forensics
+     - Pre-installed security tools:
+       - Metasploit: Vulnerability exploitation
+       - Burp Suite: Web application testing
+       - John the Ripper: Password cracking
+       - tcpdump: Packet analysis
+       - Wireshark: Network traffic analysis
+       - Autopsy: Hard drive and smartphone forensics
+     - Best used on virtual machines for safety
+
+  2. **Parrot**:
+     - Debian-based with pre-installed security tools
+     - User-friendly with both GUI and CLI
+
+  3. **Ubuntu**:
+     - User-friendly Debian-derived distribution
+     - Widely used in security and cloud computing
+     - Has both CLI and GUI interfaces
+     - Large community support
+
+  4. **Red Hat Enterprise Linux**:
+     - Subscription-based for enterprise use
+     - Dedicated customer support
+
+  5. **AlmaLinux**:
+     - Community-driven replacement for CentOS
+     - Compatible with applications designed for CentOS
+
+## Package Management
+
+- **Package**: Software piece that can be combined with others to form an application
+  - Contains files and dependencies needed for installation
+
+- **Package Managers**: Tools that help install, manage, and remove packages
+  - Different managers for different distributions
+  - Important for keeping software updated with security patches
+
+- **Common Package Managers**:
+  - **For Debian-based distributions** (Ubuntu, KALI LINUX, Parrot):
+    - dpkg (.deb file extension)
+    - APT (Advanced Package Tool) - command-line tool
+
+  - **For Red Hat-based distributions**:
+    - RPM (Red Hat Package Manager) (.rpm file extension)
+    - YUM (Yellowdog Updater Modified) - command-line tool
+
+## The Shell
+
+- **Purpose**: Interface between user and operating system
+  - Allows communication through commands
+  - Executes applications
+  - Automates tasks
+
+- **Common Shell Types**:
+  - Bash (Bourne-Again Shell) - default in most Linux distributions
+  - C Shell (csh)
+  - Korn Shell (ksh)
+  - Enhanced C shell (tcsh)
+  - Z Shell (zsh)
+
+- **Shell Communication Process**:
+  - **Standard Input**: Information received via command line (keyboard)
+  - **Standard Output**: Information returned by the OS (display)
+  - **Standard Error**: Error messages returned by the OS
+
+## Key Cybersecurity Applications
+
+- **Penetration Testing**: Simulated attacks to identify vulnerabilities
+  - Uses tools like Metasploit, Burp Suite
+
+- **Digital Forensics**: Collecting and analyzing data after an attack
+  - Uses tools like tcpdump, Wireshark, Autopsy
+
+## Career Advice for Cybersecurity
+
+- Always continue learning as technology constantly evolves
+- Don't get overwhelmed; learn incrementally
+- Focus on building a foundation of knowledge
+- Start with small coding projects, then expand skills
+- Reference materials when needed; no one memorizes everything
 - Managing access controls
 - Analyzing system resources for potential security events
 - Investigating and troubleshooting security incidents
