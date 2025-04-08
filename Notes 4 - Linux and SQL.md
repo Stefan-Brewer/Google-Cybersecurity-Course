@@ -255,3 +255,98 @@ The Linux architecture consists of six main components that work together:
 - Analyzing system resources for potential security events
 - Investigating and troubleshooting security incidents
 - Responding to unusual system behavior
+
+# Module 3 - Linux Commands in the Bash Shell 
+
+## Overview
+This module covers Linux commands used through the Bash shell, which is essential for security analysts to navigate file systems, manage files, authenticate users, and set permissions. Bash is the default shell in most Linux distributions.
+
+## Linux File System Hierarchy
+- **Filesystem Hierarchy Standard (FHS)**: Organizes data in Linux in a hierarchical structure
+- **Root Directory**: Highest-level directory, represented by a single forward slash (/)
+- **File Path**: Location of a file/directory with levels separated by forward slashes
+- **Standard FHS Directories**:
+  - `/home`: Contains user home directories
+  - `/bin`: Contains binary executables
+  - `/etc`: Stores system configuration files
+  - `/tmp`: Stores temporary files (security note: common target for attackers)
+  - `/mnt`: Mount point for external media
+
+**Path Notation**:
+- **Absolute Path**: Full path starting from root (e.g., `/home/analyst/logs`)
+- **Relative Path**: Path relative to current location
+- **Special Notations**: `~` (user's home directory), `.` (current directory), `..` (parent directory)
+
+## Navigation & Reading Files
+
+### Navigation Commands
+- `pwd`: Print working directory (shows current location)
+- `ls`: List files and directories in current location
+- `cd`: Change directory
+  - `cd directory` - move to specified directory
+  - `cd ..` - move up one level
+  - `cd ~` - move to home directory
+
+### Reading File Content
+- `cat [filename]`: Display entire file content
+- `head [filename]`: Display first 10 lines of a file (use `-n` to specify number of lines)
+- `tail [filename]`: Display last 10 lines of a file
+- `less [filename]`: View file content one page at a time
+  - Navigation: Space (forward), b (back), arrows (line by line), q (quit)
+
+## Filtering & Finding Content
+
+### grep Command
+- `grep [pattern] [file]`: Search for specific pattern in a file
+- Returns all lines containing the specified pattern
+- Case-sensitive by default
+
+### Piping
+- Uses the pipe character (`|`) to send output from one command as input to another
+- Example: `ls /home/analyst/reports | grep users` lists only files/directories containing "users"
+
+### find Command
+- Searches for files and directories based on specific criteria
+- Basic syntax: `find [starting directory] [options]`
+- Useful options:
+  - `-name "pattern"`: Case-sensitive search for files with matching name
+  - `-iname "pattern"`: Case-insensitive search for files with matching name
+  - `-mtime n`: Files modified n days ago
+  - `-mtime +n`: Files modified more than n days ago
+  - `-mtime -n`: Files modified less than n days ago
+  - `-mmin n`: Similar to mtime but works with minutes
+
+## File & Directory Management
+
+### Creating & Removing Directories
+- `mkdir [directory]`: Create new directory
+- `rmdir [directory]`: Remove empty directory
+
+### Creating & Managing Files
+- `touch [filename]`: Create new empty file
+- `rm [filename]`: Remove/delete a file
+- `mv [source] [destination]`: Move file/directory to new location
+- `mv [filename] [new_filename]`: Rename a file
+- `cp [source] [destination]`: Copy file/directory to new location
+
+### File Editing
+- `nano [filename]`: Open/create file in nano text editor
+  - Save: Ctrl+O, then Enter
+  - Exit: Ctrl+X
+- Other editors: vim, emacs (more advanced)
+
+### Output Redirection
+- `>`: Redirect output to a file (overwrites existing content)
+- `>>`: Append output to the end of a file
+- Example: `echo "text" > file.txt` writes "text" to file.txt (overwrites)
+- Example: `echo "more text" >> file.txt` appends "more text" to file.txt
+
+## User Authentication & Authorization
+- Security analysts need to be able to authenticate and authorize users
+- Basic commands for user management will be covered in the course
+
+## Best Practices
+- Use absolute paths when unsure of your current location
+- Always verify operations with commands like `ls` after creating/removing content
+- Be cautious with `rm` and `>` as they can permanently delete content
+- Organization is crucial for security operations - maintain a logical directory structure
