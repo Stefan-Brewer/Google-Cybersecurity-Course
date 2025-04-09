@@ -256,10 +256,6 @@ The Linux architecture consists of six main components that work together:
 - Investigating and troubleshooting security incidents
 - Responding to unusual system behavior
 
-# Module 3 - Linux Commands in the Bash Shell 
-
-## Overview
-This module covers Linux commands used through the Bash shell, which is essential for security analysts to navigate file systems, manage files, authenticate users, and set permissions. Bash is the default shell in most Linux distributions.
 
 ## Linux File System Hierarchy
 - **Filesystem Hierarchy Standard (FHS)**: Organizes data in Linux in a hierarchical structure
@@ -350,3 +346,128 @@ This module covers Linux commands used through the Bash shell, which is essentia
 - Always verify operations with commands like `ls` after creating/removing content
 - Be cautious with `rm` and `>` as they can permanently delete content
 - Organization is crucial for security operations - maintain a logical directory structure
+
+# Linux Fundamentals: Command Line & File System Security
+
+## File Permissions & Ownership
+
+### Understanding Permissions
+Permissions in Linux determine what actions users can perform on files and directories. There are three types of permissions:
+- **Read (r)**: View file contents or list directory contents
+- **Write (w)**: Modify file contents or create/delete files in a directory
+- **Execute (x)**: Run a file as a program or access files within a directory
+
+### Permission Categories
+Permissions are granted to three owner types:
+- **User (u)**: The owner of the file
+- **Group (g)**: Users who belong to the file's group
+- **Other (o)**: All other users on the system
+
+### Reading Permission Strings
+Linux represents permissions with a 10-character string:
+- 1st character: File type (`d` for directory, `-` for regular file)
+- 2nd-4th characters: User permissions (rwx)
+- 5th-7th characters: Group permissions (rwx)
+- 8th-10th characters: Other permissions (rwx)
+
+Example: `-rw-r--r--`
+- Regular file (-)
+- User can read and write (rw-)
+- Group can only read (r--)
+- Other can only read (r--)
+
+### Checking Permissions
+- `ls -l`: List files with permissions information
+- `ls -a`: Show hidden files (those starting with .)
+- `ls -la`: Combine both options (show hidden files with permissions)
+
+### Changing Permissions
+The `chmod` command changes permissions on files/directories:
+
+Syntax: `chmod [who][operation][permissions] filename`
+
+- **who**: u (user), g (group), o (other), or a (all)
+- **operation**: + (add), - (remove), = (set exactly)
+- **permissions**: r (read), w (write), x (execute)
+
+Examples:
+- `chmod g+w,o-r access.txt`: Add write permission for group, remove read for others
+- `chmod u=rw,g=r,o= file.txt`: Set user to read+write, group to read-only, others to no access
+
+## User Management
+
+### User Authentication & Authorization
+- **Authentication**: Verifying who someone is
+- **Authorization**: Determining what resources they can access
+
+### Root User & Sudo
+- **Root user**: Has complete system access (superuser)
+- **Problems with using root**: Security risks, irreversible mistakes, lack of accountability
+- **sudo**: Grants temporary elevated permissions to specific users
+  - Comes from "superuser do"
+  - Requires user to be in the sudoers file
+  - Preferred over logging in as root
+
+### User Management Commands
+
+| Command | Description | Example |
+|---------|-------------|---------|
+| `useradd` | Add a new user | `sudo useradd username` |
+| `userdel` | Delete a user | `sudo userdel username` |
+| `usermod` | Modify user account | `sudo usermod -option username` |
+| `chown` | Change file owner | `sudo chown user:group file` |
+
+#### Common Options
+- `useradd -g`: Set primary group
+- `useradd -G`: Add to supplemental groups
+- `usermod -a -G`: Add to supplemental group without replacing existing groups
+- `usermod -d`: Change home directory
+- `usermod -L`: Lock account
+- `userdel -r`: Delete user and their home directory
+- `chown user:group file`: Change both user and group ownership
+
+## Principle of Least Privilege
+- Grant users only the minimum access required to perform their job
+- World-writable files (accessible by all users) pose significant security risks
+- Regularly review and update permissions when users change roles or leave
+
+## Linux Support Resources
+
+### Command Line Help
+- `man [command]`: Display manual pages for commands
+- `whatis [command]`: Show brief description of a command
+- `apropos [keyword]`: Search manual pages for relevant commands
+  - `apropos -a [word1] [word2]`: Search for commands containing both words
+
+### External Resources
+- Linux has a large global community of users
+- Unix & Linux Stack Exchange: Community Q&A with ranked answers
+- Online searches often provide solutions to common problems
+
+## Basic Linux Commands Review
+
+### File Navigation
+- `ls`: List directory contents
+- `cd`: Change directory
+- `pwd`: Print working directory
+- `find`: Search for files
+
+### File Paths
+- **Absolute path**: Full path from root (starts with `/`)
+- **Relative path**: Path from current location
+- **Root directory**: Highest-level directory (represented by `/`)
+
+### File System Hierarchy Standard (FHS)
+The Linux file system is organized according to the FHS, with standardized directories like:
+- `/home`: User home directories
+- `/etc`: System configuration files
+- `/var`: Variable data (logs, etc.)
+- `/bin`: Essential command binaries
+
+### Command Structure
+- **Command**: The instruction to execute
+- **Options**: Modify command behavior (usually start with `-` or `--`)
+- **Arguments**: Data for the command to use
+
+### File Editing
+- `nano`: Simple text editor included with most Linux distributions
