@@ -13,3 +13,4 @@ https://www.coursera.org/professional-certificates/google-cybersecurity
 8. [Course 4 assignment a: File permissions in Linux](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%204-a%20-%20File%20permissions%20in%20Linux.pdf)
 9. [Course 4 assignment b: Apply filters to SQL queries](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%204-b%20-%20Apply%20filters%20to%20SQL%20queries.pdf)
 10. [Course 5 Assets, Threats, and Vulnerabilities - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%205%20-%20Asset%20Security.md)
+11. [Course 5 assignment: Vulnerability Assessment Report](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%205%20-%20Vulnerability%20Assessment%20Report.pdf)
