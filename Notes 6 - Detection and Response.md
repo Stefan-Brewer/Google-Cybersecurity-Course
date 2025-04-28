@@ -1,6 +1,6 @@
 # Course 6: Sound the Alarm: Detection and Response
 
-##Module 1: Introduction to Detection and Incident Response
+## Module 1: Introduction to Detection and Incident Response
 
 ## 1. Incident Response Fundamentals
 
