@@ -16,3 +16,4 @@ https://www.coursera.org/professional-certificates/google-cybersecurity
 11. [Course 5 assignment: Vulnerability Assessment Report](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%205%20-%20Vulnerability%20Assessment%20Report.pdf)
 12. [Course 6 Assets, Detection and Incident Response - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%206%20-%20Detection%20and%20Response.md)
 13. [Course 6 assignment: Incident handler's journal](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%206%20-%20Incident%20handler's%20journal.pdf)
+14. [Course 6 Automate Cybersecurity Tasks with Python - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%207%20-%20Automate%20with%20Python.md)
