@@ -90,3 +90,119 @@ Repeat a block of code multiple times. Also called **loops**.
     * `break`: Immediately exits the *entire* current loop.
     * `continue`: Skips the *rest of the current iteration* and proceeds to the next one.
 * **Loop Variable:** A variable used to control loop iterations (e.g., `i` in `for i in range(5)` or the counter in a `while` loop).
+
+# Module 2: Write Effective Python Code - Study Notes
+
+## Introduction to Functions
+
+* **Definition:** A function is a reusable block of code designed to perform a specific task. Think of it like a dishwasher automating the repetitive task of washing dishes.
+* **Purpose:** Functions improve efficiency and code organization by allowing you to write a set of instructions once and call it multiple times from different parts of your program. This makes code easier to manage and update; changes made within the function are reflected everywhere it's used.
+* **Types:**
+    * **Built-in Functions:** Pre-defined functions available in Python by default (e.g., `print()`, `type()`).
+    * **User-defined Functions:** Functions created by the programmer for specific needs.
+
+## Creating and Using User-Defined Functions
+
+* **Defining:** Use the `def` keyword, followed by the function name, parentheses `()`, and a colon `:`. The code block that the function will execute (its body) must be indented below the definition line.
+    ```python
+    # Define the function
+    def greet_user():
+        print("Welcome!")
+    ```
+* **Calling:** To execute the function, simply write its name followed by parentheses.
+    ```python
+    # Call the function
+    greet_user()
+    ```
+* **Parameters and Arguments:**
+    * **Parameters:** Variables listed inside the parentheses in the function definition. They act as placeholders for data the function needs to receive.
+    * **Arguments:** The actual data values passed into the function when it is called. These values are assigned to the corresponding parameters.
+    ```python
+    # Function with a parameter
+    def personalized_greeting(name):
+        print("Hello, " + name + "!")
+
+    # Calling the function with an argument
+    personalized_greeting("Alex") # "Alex" is the argument
+
+    # Function with multiple parameters
+    def add_numbers(x, y):
+        print(x + y)
+
+    # Calling with multiple arguments
+    add_numbers(5, 3) # 5 and 3 are arguments
+    ```
+* **Return Statements:** Use the `return` keyword inside a function to send a value back to the part of the program that called the function. This allows the function's result to be stored in a variable or used in further computations. Python exits the function as soon as it hits a `return` statement.
+    ```python
+    def calculate_area(length, width):
+        area = length * width
+        return area # Sends the calculated area back
+
+    # Store the returned value
+    room_area = calculate_area(10, 5)
+    print(room_area) # Output: 50
+    ```
+
+## Variable Scope
+
+* **Local Variables:** Variables defined *inside* a function (including parameters). They only exist while the function is executing and cannot be accessed from outside the function.
+* **Global Variables:** Variables defined *outside* any function. They are accessible from anywhere in the program, including inside functions.
+* **Best Practice:** While functions *can* access global variables, it's generally better to pass data into functions using parameters and get results back using `return`. Avoid using the same names for global and local variables to prevent confusion; if a variable is assigned *within* a function, Python treats it as a new local variable, even if a global variable with the same name exists.
+
+## Built-in Functions Exploration
+
+* **Review:** `print()` outputs objects to the screen, `type()` returns the data type of an object.
+* **Combining Functions:** You can use the output of one function as the input (argument) for another. The inner function is executed first.
+    ```python
+    print(type(123)) # type() executes first, its output (e.g., <class 'int'>) is passed to print()
+    ```
+* **Key Functions:**
+    * `max(iterable)` / `max(arg1, arg2, ...)`: Returns the largest item from an iterable (like a list) or the largest of several arguments.
+    * `min(iterable)` / `min(arg1, arg2, ...)`: Returns the smallest item.
+    * `sorted(iterable)`: Returns a *new* list containing all items from the iterable in ascending order (numerically or alphabetically). The original iterable remains unchanged. Requires items in the iterable to be of comparable data types (e.g., all numbers or all strings).
+    ```python
+    numbers = [5, 1, 9, 3]
+    print(max(numbers))      # Output: 9
+    print(min(numbers))      # Output: 1
+    print(sorted(numbers))   # Output: [1, 3, 5, 9]
+    print(numbers)           # Output: [5, 1, 9, 3] (original list is unchanged)
+    ```
+
+## Modules and Libraries
+
+* **Module:** A Python file (`.py`) containing Python definitions and statements (functions, variables, classes). Modules allow you to logically organize your Python code.
+* **Library:** A collection of related modules.
+* **Python Standard Library:** An extensive library of modules included with Python installations (e.g., `statistics`, `re`, `csv`, `os`, `datetime`). Provides ready-to-use code for common tasks.
+* **External Libraries:** Collections of modules developed by third parties (e.g., `NumPy`, `Beautiful Soup`). They often need to be installed before use (e.g., using `pip install library_name`).
+* **Importing:** To use code from a module, you must import it:
+    * `import module_name`: Imports the entire module. Access its contents using `module_name.function_name()`.
+    * `from module_name import function_name`: Imports only a specific function (or variable/class). Access it directly using `function_name()`.
+    * `from module_name import func1, func2`: Imports multiple specific items.
+    ```python
+    # Import the whole 'statistics' module
+    import statistics
+    data = [1, 2, 2, 3, 5]
+    mean_value = statistics.mean(data) # Use module name prefix
+
+    # Import only the 'median' function from 'statistics'
+    from statistics import median
+    median_value = median(data) # Use function name directly
+    ```
+
+## Code Readability and Style (PEP 8)
+
+* **Importance:** Code is read far more often than it is written. Readable code is easier to understand, debug, and maintain, especially when working in teams.
+* **PEP 8:** Python's official style guide, providing conventions for writing clean, consistent Python code. Following it is highly recommended.
+* **Key Elements:**
+    * **Comments:** Explain the "why" behind your code, not just the "what". Use `#` for single-line comments. Use triple quotes `"""Docstring goes here"""` (docstrings) or multiple `#` lines for multi-line comments/documentation. Keep comments concise and up-to-date.
+    * **Indentation:** Crucial for Python's syntax. Use 4 spaces per indentation level (recommended by PEP 8) to define code blocks (within functions, loops, conditionals). Consistent indentation improves readability significantly.
+    * **Naming Conventions:** Use descriptive names for variables and functions (e.g., `failed_login_attempts` instead of `fla`).
+    * **Whitespace:** Use spaces appropriately around operators and commas to improve clarity.
+    * **Line Length:** Keep lines under 79 characters (PEP 8 guideline) for better readability.
+* **Syntax:** Pay attention to details: use quotes for strings (`"hello"`), no quotes for numbers (`123`) or Booleans (`True`/`False`), use brackets `[]` for lists, and ensure headers for `if`, `for`, `while`, `def` end with a colon `:`.
+
+## Collaboration
+
+* Writing readable, well-commented, and consistently styled code (following PEP 8) is vital when working on a team.
+* It allows others to understand, use, and modify your code efficiently.
+* Sharing code snippets and seeking/giving feedback improves code quality and team productivity.
