@@ -206,3 +206,89 @@ Repeat a block of code multiple times. Also called **loops**.
 * Writing readable, well-commented, and consistently styled code (following PEP 8) is vital when working on a team.
 * It allows others to understand, use, and modify your code efficiently.
 * Sharing code snippets and seeking/giving feedback improves code quality and team productivity.
+
+# Module 3: Work with strings and lists
+
+## Working with Strings
+
+* **Definition:** Strings are ordered sequences of characters, enclosed in single or double quotes (e.g., "security", '123').
+* **Type Conversion:** Use the `str()` function to convert other data types (like integers or floats) into strings. This allows string-specific operations on them.
+* **Length:** The `len()` function returns the number of characters in a string. Useful for validating data like IP addresses (e.g., an IPv4 address shouldn't exceed 15 characters).
+* **Concatenation:** Use the `+` operator to join two strings together (e.g., "Hello" + "World" results in "HelloWorld"). Subtraction (-) is not supported.
+* **Methods:** Methods are functions specific to a data type, called using dot notation (e.g., `string.method()`).
+    * `.upper()`: Returns a copy of the string in all uppercase.
+    * `.lower()`: Returns a copy of the string in all lowercase.
+* **Indices:** Each character in a string has an index, starting from 0 for the first character. Negative indices count from the end (-1 is the last character).
+* **Bracket Notation:** Access individual characters using their index in square brackets (e.g., `"HELLO"[1]` returns "E").
+* **Slicing:** Extract a portion (substring) of a string using `[start:end]`. The slice includes the character at `start` but excludes the character at `end` (e.g., `"HELLO"[1:4]` returns "ELL").
+* **`.index()` Method:** Finds the *first* occurrence of a character or substring and returns its starting index. Raises an error if the input is not found. It's case-sensitive. Be mindful when searching for substrings that might appear within larger strings (e.g., searching for "ts" in "tsnow, tshah" returns 0, not 7).
+* **Immutability:** Strings are immutable; once created, their characters cannot be changed using index assignment (e.g., `my_string[1] = "A"` will cause an error).
+
+## Working with Lists
+
+* **Definition:** Lists are ordered, mutable (changeable) collections of items, enclosed in square brackets `[]`, with items separated by commas. Lists can hold items of different data types.
+* **Use Cases:** Storing collections like IP addresses, usernames, URLs, or blocked applications.
+* **Indices & Bracket Notation:** Similar to strings, list items have indices starting from 0. Use bracket notation to access or *modify* individual items (e.g., `my_list[1] = 7` changes the second item).
+* **Slicing:** Extract a sublist using `[start:end]`. The result is a new list.
+* **Concatenation:** Use the `+` operator to combine two lists.
+* **Mutability:** Unlike strings, lists are mutable. You can change, add, or remove elements after creation.
+* **Methods:**
+    * `.insert(index, element)`: Adds `element` at the specified `index`, shifting subsequent elements.
+    * `.remove(element)`: Removes the *first* occurrence of the specified `element`. Raises an error if the element is not found.
+    * `.append(element)`: Adds `element` to the *end* of the list. Often used in loops to build lists.
+    * `.index(element)`: Returns the index of the *first* occurrence of `element`. Like the string method, it raises an error if the element isn't found and only finds the first instance if duplicates exist.
+
+## Writing Simple Algorithms
+
+* **Definition:** An algorithm is a set of rules or steps to solve a problem, taking input, performing tasks, and returning output.
+* **Approach:** Break down complex problems into smaller, manageable steps before coding.
+* **Example (Extracting Network IDs):**
+    1.  **Problem:** Extract the first three digits (network ID) from a list of IP addresses (strings).
+    2.  **Step 1 (Single Item):** Use string slicing `ip_address[0:3]` to get the first three characters of one IP address.
+    3.  **Step 2 (Multiple Items):**
+        * Create an empty list (e.g., `network_ids = []`).
+        * Use a `for` loop to iterate through the original list of IP addresses.
+        * Inside the loop, apply the slice from Step 1 to the current IP address.
+        * Use the `.append()` method to add the resulting slice to the `network_ids` list.
+    4.  **Result:** The `network_ids` list contains the first three digits of each IP address.
+
+## Regular Expressions (Regex)
+
+* **Definition:** A regular expression (regex) is a sequence of characters forming a search pattern. Used for advanced pattern matching in strings, often within log files or large text data.
+* **Python Module:** Requires importing the `re` module (`import re`).
+* **`re.findall(pattern, string)`:** A key function that finds *all* non-overlapping matches of the `pattern` in the `string` and returns them as a list.
+* **Basic Patterns:** Patterns consist of literal characters (which match themselves) and special metacharacters.
+* **Common Metacharacters & Symbols:**
+    * `.` (Dot): Matches any single character except newline.
+    * `\w`: Matches any alphanumeric character (letters, numbers, and underscore `_`).
+    * `\d`: Matches any digit (0-9).
+    * `\s`: Matches any whitespace character (space, tab, newline).
+    * `\.`: Matches a literal period (needs backslash to escape the dot's special meaning).
+    * `+` (Quantifier): Matches *one or more* occurrences of the preceding character/group (e.g., `\d+` matches one or more digits like "123" or "7").
+    * `*` (Quantifier): Matches *zero or more* occurrences of the preceding character/group (e.g., `\d*` matches "", "1", "123").
+    * `{n}` (Quantifier): Matches exactly *n* occurrences (e.g., `\d{3}` matches exactly three digits).
+    * `{n,m}` (Quantifier): Matches between *n* and *m* occurrences (inclusive) (e.g., `\d{1,3}` matches one, two, or three digits).
+* **Constructing Patterns (Example: Email Address):**
+    * An email like `user1@email.com` can be broken down:
+        * `\w+`: Matches the username part (one or more alphanumerics).
+        * `@`: Matches the literal "@" symbol.
+        * `\w+`: Matches the domain name part.
+        * `\.`: Matches the literal "." (escaped).
+        * `\w+`: Matches the top-level domain part ("com", "net", etc.).
+    * **Combined Regex:** `\w+@\w+\.\w+`
+* **Usage:** Pass the pattern string and the string to search into `re.findall()`.
+    ```python
+    import re
+    log = "user1@email.com accessed server. user2@domain.net failed login."
+    pattern = r'\w+@\w+\.\w+' # Using r'...' for raw string is good practice for regex
+    emails = re.findall(pattern, log)
+    # emails will be ['user1@email.com', 'user2@domain.net']
+    ```
+* **Testing:** It's important to test regex patterns carefully, as they can sometimes match unintended strings or miss desired ones.
+
+## Key Takeaways for Cybersecurity Analysts
+
+* String and list manipulation are fundamental for processing security data like logs, IP addresses, usernames, and IDs.
+* Understanding indices, slicing, and methods (`len()`, `.upper()`, `.lower()`, `.index()`, `.insert()`, `.remove()`, `.append()`) is crucial.
+* Algorithms provide structured ways to solve problems by iterating through data and applying operations.
+* Regular expressions offer powerful pattern matching capabilities essential for extracting specific information (like emails, IPs, specific error codes) from large amounts of text data.
