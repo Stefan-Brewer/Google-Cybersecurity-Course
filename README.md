@@ -18,3 +18,4 @@ https://www.coursera.org/professional-certificates/google-cybersecurity
 13. [Course 6 assignment: Incident handler's journal](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%206%20-%20Incident%20handler's%20journal.pdf)
 14. [Course 7 Automate Cybersecurity Tasks with Python - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%207%20-%20Automate%20with%20Python.md)
 16. [Course 7 assignment: Python Algorithm for file updates](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%207%20-%20Python%20Algorithm%20for%20file%20updates.pdf)
+17. [Course 8 Prepare for Cybersecurity Jobs - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%208%20-%20Prepare%20for%20Cybersecurity%20Jobs.md)
