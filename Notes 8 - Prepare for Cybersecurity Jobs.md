@@ -140,7 +140,7 @@ Security is a fast-paced environment. Entry-level analysts are crucial for escal
 
 Your attention to detail and understanding of how incidents affect data and assets are vital, as your decisions impact the entire security team and organization.
 
-# Module 3 - Communicate Effectively to Influence Stakeholders: Study Notes
+# Module 3 - Communicate Effectively to Influence Stakeholders
 
 ## Understanding Stakeholders in Cybersecurity
 
