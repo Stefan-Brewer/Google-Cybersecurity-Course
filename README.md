@@ -1,6 +1,8 @@
 # My notes for the Google Cybersecurity Course
 Notes and assignments for the Google cybersecurity course on Coursera:  
 https://www.coursera.org/professional-certificates/google-cybersecurity  
+
+Course was complated on May 11th 2025. [Click here for a link to the certificate](https://coursera.org/share/3d1178a23237343765a20e3e053912af)
   
 ### Content:
 1. [Course 1 Introduction to cybersecurity - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%201%20-%20Introduction%20to%20cybersecurity.md)
@@ -19,3 +21,4 @@ https://www.coursera.org/professional-certificates/google-cybersecurity
 14. [Course 7 Automate Cybersecurity Tasks with Python - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%207%20-%20Automate%20with%20Python.md)
 16. [Course 7 assignment: Python Algorithm for file updates](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%207%20-%20Python%20Algorithm%20for%20file%20updates.pdf)
 17. [Course 8 Prepare for Cybersecurity Jobs - notes](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Notes%208%20-%20Prepare%20for%20Cybersecurity%20Jobs.md)
+18. [Course 8 assignment: Create a resume](https://github.com/Stefan-Brewer/Google-Cybersecurity-Course/blob/main/Assignment%208%20-%20Create%20a%20resume.pdf)
