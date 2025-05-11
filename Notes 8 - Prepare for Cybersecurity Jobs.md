@@ -1,4 +1,4 @@
-# Consolidated Cybersecurity Study Notes
+# Course 8: Put It to Work: Prepare for Cybersecurity Jobs
 
 ## Core Cybersecurity Concepts
 
